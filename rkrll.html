@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Фулл Anhka</title>
+	<style type="text/css">
+		.center {
+			display: flex;
+  			align-items: center;
+  			justify-content: center
+		}
+
+		.center2 {
+			display: none;
+  			align-items: center;
+  			justify-content: center
+		}
+	</style>
+</head>
+<body>
+	<div style="display: flex">
+		<button class="center" onclick="show()" style="font-style: normal;font-size: 50px;line-height: 2;">Смотреть фулл с Anhka</button>
+		<video src="video.webm" id="full" class="center2"></video><br>
+		<p hidden id="text">Аахаххахахахаахахха, затроллен 🤣🤣🤣🤣🤣</p>
+	</div>
+	<script type="text/javascript">
+		function show() {
+			let full = document.getElementById("full");
+			let button = document.querySelector(".center");
+			let text = document.querySelector("#text");
+
+			full.style.display = "flex";
+			full.play();
+			full.requestFullscreen();
+
+			button.style.display = "none"
+			text.hidden = false;
+		}
+	</script>
+</body>
+</html>
